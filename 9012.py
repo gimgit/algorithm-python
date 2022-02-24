@@ -1,22 +1,20 @@
-import sys
-sys.stdin = open('input.txt')
-T = int(sys.stdin.readline())
+T = int(input())
 for i in range(T):
-    stack = list(sys.stdin.readline().rstrip())
-    sum = 0
-    for target in stack:
-        if target == '(':
-            sum += 1
-        elif target == ')':
-            sum -= 1
-        if sum < 0:
+    stack = list(input())
+
+    while len(stack) != 0:
+        if stack[0] == ")":
             print('NO')
             break
-    if sum == 0:
-        print("Yes")
-    else:
-        print("NO")
-        
+        else:
+            if ')' in stack:
+                stack.remove(')')
+                stack.remove('(')
+            else:
+                print("NO")
+                break
+    if len(stack) == 0:
+        print("YES")
         
 # input       
 # 6
