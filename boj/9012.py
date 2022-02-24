@@ -1,4 +1,6 @@
-T = int(input())
+import sys
+sys.stdin = open('9012.txt')
+T = int(sys.stdin.readline())
 for i in range(T):
     stack = list(input())
 
@@ -15,8 +17,8 @@ for i in range(T):
                 break
     if len(stack) == 0:
         print("YES")
-        
-# input       
+
+# input
 # 6
 # (())())
 # (((()())()
