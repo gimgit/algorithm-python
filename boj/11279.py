@@ -13,4 +13,4 @@ for el in range(n):
         else:
             print('0')
     else:
-        heapq.heappush(heap, [-num, num])
+        heapq.heappush(heap, [-num, num]) 
