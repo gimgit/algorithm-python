@@ -9,7 +9,6 @@ process_time = [0 for _ in range(n)]
 total_process_time = 0
 
 for i in range(n):
-    print(total_process_time)
     if i == 0:
         process_time[i] = m[0]
         total_process_time = m[0]
